@@ -1,4 +1,4 @@
-export const baseUrl = "http://localhost:7004/api"
+export const baseUrl = "http://localhost:7007/api"
 
 export const postRequest = async (url, body) => {
   const response =  await fetch(url, {
@@ -22,5 +22,19 @@ export const postRequest = async (url, body) => {
         }
     
 
+    return data;
+};
+export const getRequest = async (url) => {
+    const response = await fetch(url)
+    const data = await response.json()
+
+    if (!response.ok) {
+        let message = "An error occured..."
+
+        if (data?.message) {
+            message = data.message
+        }
+        return { error: true, message }
+    }
     return data;
 };
