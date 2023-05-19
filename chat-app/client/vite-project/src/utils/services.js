@@ -1,10 +1,10 @@
-export const baseUrl = "http://localhost:7007/api"
+export const baseUrl = "http://localhost:7008/api";
 
 export const postRequest = async (url, body) => {
   const response =  await fetch(url, {
         method: "POST",
         headers: {
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
         },
         body,
     });
