@@ -3,7 +3,7 @@ import { baseUrl, getRequest,postRequest } from "../utils/services";
 
 export const ChatContext = createContext();
 
-export const ChatContextProvider = ({ children, user }) => {
+export const ChatContextProvider = ({children, user }) => {
     const [userChats, setUserChats] = useState(null);
     const [isUserChatsLoading, setIsUserChatsLoading] = useState(false);
     const [userChatsError, setUserChatsError] = useState(null);
@@ -31,7 +31,7 @@ export const ChatContextProvider = ({ children, user }) => {
     return <ChatContext.Provider value={{
         userChats,
         isUserChatsLoading,
-        userChatsError
+        userChatsError,
     }}>
         {children}
     </ChatContext.Provider>
