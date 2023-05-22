@@ -40,4 +40,5 @@ const Login = () => {
             </Row>
         </Form></>);
 };
+export default Login;
  
