@@ -1,5 +1,5 @@
 import { useFetchRecipientUser } from "../../hooks/useFetchRecipient";
-import avarter from "../../assets/avarter.svg"
+
 const UserChat = ({ chat, user }) => {
     const { recipientUser } = useFetchRecipientUser(chat, user);
     
