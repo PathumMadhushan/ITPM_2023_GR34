@@ -13,7 +13,7 @@ const UserChat = ({ chat, user }) => {
 </div>
             <div className="text-content">
             <div className="name">{recipientUser?.name}</div>
-            <div className="text">Text Message</div>
+           
         </div>
         </div>
         <div className="d-flex flex-column align-items-end">
