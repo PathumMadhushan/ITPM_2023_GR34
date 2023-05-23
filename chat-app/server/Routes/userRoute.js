@@ -4,3 +4,4 @@ const { registerUser, loginUser, findUser, getUsers } = require("../Controllers/
 const router = express.Router();
 
 router.post("/register", registerUser);
+router.post("/login", loginUser);
