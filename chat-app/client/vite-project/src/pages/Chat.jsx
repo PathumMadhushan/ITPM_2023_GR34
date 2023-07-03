@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { ChatContext } from "../context/ChatContext";
 import { Container, Stack } from "react-bootstrap";
 import UserChat from "../components/chat/UserChat";
+import { AuthContext } from "../context/AuthContext";
 
 const Chat = () => {
     
@@ -13,3 +14,4 @@ const Chat = () => {
   
     return <>Chat</>;
 };
+export default Chat;

@@ -1,6 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 import { useCallback } from "react";
 import { baseUrl, postRequest } from "../utils/services";
+
 export const AuthContext = createContext()
 
 export const AuthContextProvider = ({ children }) => {
@@ -54,7 +55,7 @@ export const AuthContextProvider = ({ children }) => {
 
     const loginUser = useCallback(async (e) => {
         
-        e.preventDefault()
+e.preventDefault()
 
         setIsLoginLoading(true)
         setLoginError(null)
@@ -63,21 +64,21 @@ export const AuthContextProvider = ({ children }) => {
             `${baseUrl}/users/login`,
             JSON.stringify(loginInfo));
         
-        setIsLoginLoading(false)
+          setIsLoginLoading(false)
         if (response.error) {
             return setLoginError(response)
         }
         
         localStorage.setItem("User", JSON.stringify(response))
         setUser(response);
-    }, [loginInfo]);
+}, [loginInfo]);
 
-    const logoutUser = useCallback(() => {
+    const logoutUser = useCallback(()=> {
         localStorage.removeItem("User");
         setUser(null);
     }, [])
 
-     return (
+    return (
         <AuthContext.Provider value={{
             user,
             registerInfo,

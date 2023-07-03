@@ -2,14 +2,15 @@ import { useContext } from "react";
 import { Alert, Button, Form, Row, Col, Stack } from "react-bootstrap";
 import { AuthContext } from "../context/AuthContext";
 
+
 const Login = () => {
-    const { loginUser,
+    const {  loginUser,
         loginError,
         loginInfo,
         updateLoginInfo,
         isLoginLoading } = useContext(AuthContext);
-    
-       return (<>
+
+    return (<>
         <Form onSubmit={loginUser}>
             <Row style={{
                 height: "100vh",
@@ -40,5 +41,5 @@ const Login = () => {
             </Row>
         </Form></>);
 };
-export default Login;
  
+export default Login;

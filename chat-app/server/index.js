@@ -20,7 +20,7 @@ app.get("/", (req, res) => {
 });
 
 
-const port = process.env.PORT || 8090;
+const port = process.env.PORT || 8050;
 const uri = process.env.ATLAS_URI;
 
 app.listen(port, (req, res) => {

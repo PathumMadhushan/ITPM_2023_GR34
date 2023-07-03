@@ -20,7 +20,6 @@ const UserChat = ({ chat, user }) => {
             <div className="date">
                 7/4/2023
             </div>
-            
             <div className="this-user-notifications">2</div>
             <span className="user-online"></span>
         </div>
